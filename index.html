@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
     crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous" />
   <title>Student Grade Table</title>
 </head>
 
@@ -16,37 +19,53 @@
     <h3 class ="col-6 col-md-4">Average Grade:<span class="badge badge-secondary badge-dark">99</span></h3>
     </header>
   </div>
-
-  <table class="table table-bordered table-striped">
+<div class="container">
+  <div class="row">
+  <table class="table table-bordered table-striped col-md-8">
     <thead class="thead-dark">
       <th>Student Name</th>
       <th>Course</th>
       <th>Grade</th>
     </thead>
     <tbody>
-      <!-- <tr>
-        <td>Tim Berners-lee</td>
-        <td>Web Development</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>Scott Bowler</td>
-        <td>Web Development</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>Tim Davis</td>
-        <td>Web Development</td>
-        <td>50</td>
-      </tr> -->
     </tbody>
+
   </table>
+
+    <form  class="col-4">
+  <div class="input-group ">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user-alt"></i></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Name" name="name">
+  </div>
+  <div class="input-group mt-2">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="addon-wrapping"><i class="fas fa-laptop-code"></i></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Course" name="course">
+  </div>
+  <div class="input-group mt-2">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="addon-wrapping"><i class="fas fa-chalkboard"></i></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Grade" name="grade">
+  </div>
+    <div class="row justify-content-end px-3">
+        <button type="submit" class="btn mr-1 mt-2 btn-sm btn-info">Add</button>
+        <button type="reset" class="btn mt-2 btn-sm btn-danger">Cancel</button>
+      </div>
+    </form>
+
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
   integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
   crossorigin="anonymous"></script>
+
 <script src="components/app.js"></script>
 <script src="components/grade-table.js"></script>
 <script src="components/page-header.js"></script>
+<script src="components/gradeForm.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
